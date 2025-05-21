@@ -1,0 +1,37 @@
+MediInsight Project Summary:
+
+1. **Frontend Features**:
+   - **Upload Report**: Users can upload medical reports in PDF or image format. The system processes the files to extract text using OCR (Tesseract.js) or PDF parsing.
+   - **View and Download Reports**: Users can view and download uploaded reports, including photos and PDFs, directly from the interface.
+   - **Prescription Decode**: Extracts and summarizes prescription details, including medications, dosage, and instructions.
+   - **Medicine Decode**: Extracts and provides detailed information about medicines, including brand name, generic name, dosage, side effects, and more.
+   - **Report Analysis**: Summarizes key findings, abnormal results, critical points, and follow-up actions from medical reports using AI.
+   - **Doctor Interaction**: Users can add or remove doctors and share reports with them.
+
+2. **Backend Features**:
+   - **User Authentication**: Secure user and doctor authentication using JWT tokens.
+   - **File Processing**:
+     - Image files are processed using Tesseract.js for OCR.
+     - PDF files are parsed using `pdf-parse` to extract text.
+   - **AI Integration**:
+     - Google GenAI is used to analyze medical reports and generate structured summaries.
+     - AI models provide JSON-formatted responses for easy integration.
+   - **Database**:
+     - MongoDB is used to store user data, reports, and doctor-patient relationships.
+     - Reports include text, photo (Base64-encoded), and PDF data (binary).
+   - **APIs**:
+     - Endpoints for uploading reports, decoding prescriptions, analyzing reports, and managing users and doctors.
+
+3. **Key Technologies**:
+   - **Frontend**: React, Tailwind CSS, Axios.
+   - **Backend**: Node.js, Express.js, MongoDB, Tesseract.js, Google GenAI.
+   - **Authentication**: JWT-based authentication with cookies.
+
+4. **Deployment**:
+   - The frontend is built using Vite and served as static files.
+   - The backend serves APIs and handles static file requests for the frontend.
+
+5. **Future Enhancements**:
+   - Improve AI accuracy for report analysis and medicine decoding.
+   - Add support for additional file types and languages.
+   - Enhance the user interface for better accessibility and usability.
